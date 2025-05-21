@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="player">
+    <h1>MY Music Player</h1>
+
+    <!--song name-->
+    <h2 id="songName">Now Playing: Ishq Hai</h2>
+
+    <!--audio player-->
+    <audio id="audio" controls>
+      <source id="audioSource" src="download music/Ishq Hai.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!--controls-->
+    <div class="controls">
+        <button onclick="prevSong()" title="Previous"><i class="fas fa-backward"></i></button>
+        <button onclick="playPause()" title="Play/Pause"><i id="playPauseIcon" class="fas fa-play"></i></button>
+        <button onclick="nextSong()" title="Next"><i class="fas fa-forward"></i></button>
+    </div>
+  </div>
+
+  <!--playlist-->
+    <div class="playlistContainer">
+      <h3>All Songs</h3>
+      <ul id="playlistList"></ul>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
